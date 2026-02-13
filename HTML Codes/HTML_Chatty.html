@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CTA</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2a5298;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  background: #f2f2f2;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+select, input[type="text"] {
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2a5298;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1e3c72;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image animée en fond */
+body {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("Bétise.jpg");
+  background-repeat: repeat-x;
+  background-size: auto 100%; /* hauteur fixe, largeur auto = pas zoom */
+  animation: slideBackground 30s linear infinite;
+  z-index: -1;
+}
+
+@keyframes slideBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 0;
+  }
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="container">
+<h2>Maxendre and Théo's World</h2>
+
+<form method="POST">
+
+  <div class="row">
+    <div class="label">Lampe Start</div>
+    <div class="value" id="Q0.0Id">Q1.0</div>
+  </div>
+
+  <div class="row">
+    <div class="label">Bouton Start</div>
+    <div class="value" id="M10.0Id">M10.0</div>
+  </div>
+
+  <div class="row">
+    <div class="label">Forçage</div>
+    <select name='"Start_stop"'>
+      <option value=:=Start_stop:></option>
+      <option value="1">Start</option>
+      <option value="0">Stop</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <div class="label">Pièces max rouges</div>
+    <input name='"PieceMax"' value=:=PieceMax: type="text">
+  </div>
+
+  <div class="row">
+    <div class="label">Compteur pièces rouges</div>
+    <div class="value" id="MW2Id">MW2</div>
+  </div>
+
+  <button type="submit">Envoyer</button>
+
+</form>
+</div>
+
+</body>
+</html>
