@@ -3,14 +3,14 @@
   <Engineering version="V19" />
   <SW.Tags.PlcTagTable ID="0">
     <AttributeList>
-      <Name>Default tag table</Name>
+      <Name>Sorties</Name>
     </AttributeList>
     <ObjectList>
       <SW.Tags.PlcTag ID="1" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.5</LogicalAddress>
-          <Name>Clock 1Hz</Name>
+          <LogicalAddress>%Q0.0</LogicalAddress>
+          <Name>1M2</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="2" CompositionName="Comment">
@@ -18,7 +18,7 @@
               <MultilingualTextItem ID="3" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Descente vérin élévation pièce</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -28,8 +28,8 @@
       <SW.Tags.PlcTag ID="4" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.3</LogicalAddress>
-          <Name>Clock 2Hz</Name>
+          <LogicalAddress>%Q0.1</LogicalAddress>
+          <Name>1M1</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="5" CompositionName="Comment">
@@ -37,7 +37,7 @@
               <MultilingualTextItem ID="6" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Montée vérin élévation pièce</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -47,8 +47,8 @@
       <SW.Tags.PlcTag ID="7" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.6</LogicalAddress>
-          <Name>Clock 0,625Hz</Name>
+          <LogicalAddress>%Q0.2</LogicalAddress>
+          <Name>2M1</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="8" CompositionName="Comment">
@@ -56,7 +56,7 @@
               <MultilingualTextItem ID="9" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Sortie vérin éjection pièce</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -66,8 +66,8 @@
       <SW.Tags.PlcTag ID="A" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.7</LogicalAddress>
-          <Name>Clock 0,5Hz</Name>
+          <LogicalAddress>%Q0.3</LogicalAddress>
+          <Name>3M1</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="B" CompositionName="Comment">
@@ -75,7 +75,7 @@
               <MultilingualTextItem ID="C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Activation toboggan pneumatique</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -85,8 +85,8 @@
       <SW.Tags.PlcTag ID="D" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.4</LogicalAddress>
-          <Name>Clock 1,5Hz</Name>
+          <LogicalAddress>%Q1.0</LogicalAddress>
+          <Name>LStart</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="E" CompositionName="Comment">
@@ -94,7 +94,7 @@
               <MultilingualTextItem ID="F" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Lampe BP Start</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -104,8 +104,8 @@
       <SW.Tags.PlcTag ID="10" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.2</LogicalAddress>
-          <Name>Clock 2,5Hz</Name>
+          <LogicalAddress>%Q1.1</LogicalAddress>
+          <Name>LReset</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="11" CompositionName="Comment">
@@ -113,7 +113,7 @@
               <MultilingualTextItem ID="12" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Lampe BP Reset</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -123,8 +123,8 @@
       <SW.Tags.PlcTag ID="13" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.1</LogicalAddress>
-          <Name>Clock 5Hz</Name>
+          <LogicalAddress>%Q1.2</LogicalAddress>
+          <Name>Q1</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="14" CompositionName="Comment">
@@ -132,7 +132,7 @@
               <MultilingualTextItem ID="15" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Voyant lumineux Q1</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -142,8 +142,8 @@
       <SW.Tags.PlcTag ID="16" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.0</LogicalAddress>
-          <Name>Clock 10Hz</Name>
+          <LogicalAddress>%Q1.3</LogicalAddress>
+          <Name>Q2</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="17" CompositionName="Comment">
@@ -151,7 +151,7 @@
               <MultilingualTextItem ID="18" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text />
+                  <Text>Voyant lumineux Q2</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
