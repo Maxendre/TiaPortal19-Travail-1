@@ -6,7 +6,7 @@
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
   <Section Name="Static">
     <Member Name="Grosse donnée" Datatype="Bool" Remanence="Retain" />
-    <Member Name="Une autre grosse donnée et un autre test" Datatype="Int" Remanence="Retain" />
+    <Member Name="Une autre grosse donnée" Datatype="Int" Remanence="Retain" />
   </Section>
 </Sections></Interface>
       <Name>Grosse data</Name>
