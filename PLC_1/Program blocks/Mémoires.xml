@@ -6,6 +6,7 @@
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
   <Section Name="Static">
     <Member Name="Mode Manuel" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Affichage hauteur" Datatype="Int" Remanence="Retain" />
   </Section>
 </Sections></Interface>
       <Name>Mémoires</Name>
