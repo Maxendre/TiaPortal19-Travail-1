@@ -3,6 +3,7 @@
   <Engineering version="V19" />
   <SW.Blocks.GlobalDB ID="0">
     <AttributeList>
+      <AutoNumber>false</AutoNumber>
       <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
   <Section Name="Static">
     <Member Name="Nb_J-1" Datatype="Int" Remanence="Retain" />
@@ -40,7 +41,7 @@
 </Sections></Interface>
       <Name>DB Bonnes Pièces</Name>
       <Namespace />
-      <Number>1</Number>
+      <Number>13</Number>
       <ProgrammingLanguage>DB</ProgrammingLanguage>
     </AttributeList>
     <ObjectList>
