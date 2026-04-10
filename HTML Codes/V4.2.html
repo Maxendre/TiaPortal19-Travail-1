@@ -1,0 +1,214 @@
+<!-- ========================= -->
+<!-- 🔌 VARIABLES AUTOMATE -->
+<!-- ========================= -->
+
+<!-- Commandes -->
+<!-- AWP_In_Variable Name='"Start_stop"' -->
+<!-- AWP_In_Variable Name='"Reset"' -->
+
+<!-- Etats lampes -->
+<!-- AWP_In_Variable Name='"Q1.0"' -->
+<!-- AWP_In_Variable Name='"Q1.1"' -->
+<!-- AWP_In_Variable Name='"Q1.2"' -->
+<!-- AWP_In_Variable Name='"Q1.3"' -->
+
+<!-- Compteurs -->
+<!-- AWP_In_Variable Name='"MW10"' -->
+<!-- AWP_In_Variable Name='"MW12"' -->
+<!-- AWP_In_Variable Name='"MW14"' -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Machine</title>
+
+<style>
+
+/* 🎨 Fond animé moderne (dégradé) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: linear-gradient(270deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 📦 Container */
+.container {
+  background: rgba(255,255,255,0.95);
+  padding: 30px;
+  border-radius: 20px;
+  width: 500px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 🔘 Boutons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+button {
+  flex: 1;
+  margin: 5px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.start { background: #28a745; }
+.stop { background: #dc3545; }
+.reset { background: #ffc107; color: black; }
+
+/* 💡 Lampes */
+.lamps {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.lamp {
+  text-align: center;
+}
+
+.circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: gray;
+  margin: auto;
+}
+
+/* Etats */
+.on {
+  background: limegreen;
+  box-shadow: 0 0 20px limegreen;
+}
+
+.off {
+  background: darkred;
+  box-shadow: 0 0 5px black;
+}
+
+/* 📊 Compteurs */
+.counters {
+  display: flex;
+  justify-content: center;
+  gap : 20px;
+}
+
+.counter {
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Dashboard Machine</h2>
+
+<form method="POST">
+
+  <!-- 🔘 Boutons -->
+  <div class="buttons">
+    <button class="start" name=I1.0Id value="1">Start</button>
+    <button class="stop" name=I1.1Id value="0">Stop</button>
+    <button class="reset" name=I1.3Id value="1">Reset</button>
+  </div>
+
+  <!-- 💡 Lampes -->
+  <div class="lamps">
+
+    <div class="lamp">
+      <div class="circle" id=Q1.0Id></div>
+      <p>Start</p>
+    </div>
+
+    <div class="lamp">
+      <div class="circle" id=Q1.1Id></div>
+      <p>Stop</p>
+    </div>
+
+    <div class="lamp">
+      <div class="circle" id=Q1.2Id></div>
+      <p>Q1</p>
+    </div>
+
+    <div class="lamp">
+      <div class="circle" id=Q1.3Id></div>
+      <p>Q2</p>
+    </div>
+
+  </div>
+
+  <!-- 📊 Compteurs -->
+  <div class="counters">
+
+    <div class="counter">
+      <h3 id=MW28Id></h3>
+      <p>Mauvaises</p>
+    </div>
+
+    <div class="counter">
+      <h3 id=MW26Id></h3>
+      <p>Bonnes</p>
+    </div>
+
+  </div>
+
+</form>
+</div>
+
+<!-- 💡 Script lampes ON/OFF -->
+<script>
+setInterval(() => {
+  document.querySelectorAll('.circle').forEach(el => {
+
+    let val = el.innerText.trim();
+
+    el.classList.remove("on", "off");
+
+    if (val === "1") {
+      el.classList.add("on");
+    } else {
+      el.classList.add("off");
+    }
+
+  });
+}, 300);
+</script>
+
+</body>
+</html>
