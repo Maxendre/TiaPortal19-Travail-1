@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <InstanceOfName>TON_SFB</InstanceOfName>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="IN" Datatype="Bool" Remanence="Retain" />
+    <Member Name="PT" Datatype="Time" Remanence="Retain" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Q" Datatype="Bool" Remanence="Retain" />
+    <Member Name="ET" Datatype="Time" Remanence="Retain" />
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="STATE" Datatype="Byte" Remanence="Retain" />
+    <Member Name="STIME" Datatype="Time" Remanence="Retain" />
+    <Member Name="ATIME" Datatype="Time" Remanence="Retain" />
+  </Section>
+</Sections></Interface>
+      <Name>IEC_Timer_0_DB_3</Name>
+      <Namespace />
+      <Number>10</Number>
+      <OfSystemLibElement>TON</OfSystemLibElement>
+      <OfSystemLibVersion>1.0</OfSystemLibVersion>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>
