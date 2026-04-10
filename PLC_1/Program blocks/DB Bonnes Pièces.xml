@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="Nb_J-1" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-2" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-3" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-4" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-5" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-6" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-7" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-8" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-9" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-10" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-11" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-12" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-13" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-14" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-15" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-16" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-17" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-18" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-19" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-20" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-21" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-22" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-23" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-24" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-25" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-26" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-27" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-28" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-29" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-30" Datatype="Int" Remanence="Retain" />
+    <Member Name="Nb_J-31" Datatype="Int" Remanence="Retain" />
+  </Section>
+</Sections></Interface>
+      <Name>DB Bonnes Pièces</Name>
+      <Namespace />
+      <Number>1</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>
