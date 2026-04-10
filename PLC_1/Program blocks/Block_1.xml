@@ -7,7 +7,9 @@
   <Section Name="Input" />
   <Section Name="Output" />
   <Section Name="InOut" />
-  <Section Name="Temp" />
+  <Section Name="Temp">
+    <Member Name="RET_VAL_1" Datatype="Int" />
+  </Section>
   <Section Name="Constant" />
   <Section Name="Return">
     <Member Name="Ret_Val" Datatype="Void" />
@@ -38,9 +40,9 @@
         <Component Name="DB 333" />
       </Symbol>
     </Access>
-    <Access Scope="GlobalVariable" UId="22">
+    <Access Scope="LocalVariable" UId="22">
       <Symbol>
-        <Component Name="RETVAL_WWW" />
+        <Component Name="RET_VAL_1" />
       </Symbol>
     </Access>
     <Part Name="WWW" Version="1.1" UId="23">
