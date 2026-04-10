@@ -7,6 +7,14 @@
   <Section Name="Static">
     <Member Name="Mode Manuel" Datatype="Bool" Remanence="Retain" />
     <Member Name="Affichage hauteur" Datatype="Int" Remanence="Retain" />
+    <Member Name="HMI BP Ascenceur Haut" Datatype="Bool" Remanence="Retain" />
+    <Member Name="HMI BP Ascenceur Bas" Datatype="Bool" Remanence="Retain" />
+    <Member Name="HMI BP Ejection" Datatype="Bool" Remanence="Retain" />
+    <Member Name="HMI SW Glissière" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Erreur Montée Ascenceur" Datatype="Int" Remanence="Retain" />
+    <Member Name="Erreur Descente Ascenceur" Datatype="Int" Remanence="Retain" />
+    <Member Name="Erreur Ejection" Datatype="Int" Remanence="Retain" />
+    <Member Name="Erreur Capteurs" Datatype="Int" Remanence="Retain" />
   </Section>
 </Sections></Interface>
       <Name>Mémoires</Name>
