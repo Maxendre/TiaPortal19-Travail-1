@@ -15,6 +15,14 @@
     <Member Name="Erreur Descente Ascenceur" Datatype="Int" Remanence="Retain" />
     <Member Name="Erreur Ejection" Datatype="Int" Remanence="Retain" />
     <Member Name="Erreur Capteurs" Datatype="Int" Remanence="Retain" />
+    <Member Name="Sortie Montée Asc" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Sortie Desc Asc" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Sortie Rampe" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Sortie Ejection" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Sortie LStart" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Sortie LReset" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Sortie LQ1" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Sortie LQ2" Datatype="Bool" Remanence="Retain" />
   </Section>
 </Sections></Interface>
       <Name>Mémoires</Name>

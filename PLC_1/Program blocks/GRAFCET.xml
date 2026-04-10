@@ -1260,7 +1260,7 @@
       <Step Number="1" Init="true" Name="Step1">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;LReset&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie LReset&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
@@ -1299,7 +1299,7 @@
       <Step Number="2" Init="false" Name="Step2">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;1M2&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie Desc Asc&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
@@ -1338,7 +1338,7 @@
       <Step Number="3" Init="false" Name="Step3">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;LStart&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie LStart&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
@@ -1451,7 +1451,7 @@
       <Step Number="6" Init="false" Name="Step6">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;1M1&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie Montée Asc&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
@@ -1525,11 +1525,11 @@
       <Step Number="8" Init="false" Name="Step8">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;2M1&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie Ejection&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action Qualifier="N">
-            <Token Text="&quot;3M1&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie Rampe&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action Qualifier="N">
@@ -1572,7 +1572,7 @@
       <Step Number="13" Init="false" Name="Step9">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;1M2&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie Desc Asc&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
@@ -1611,7 +1611,7 @@
       <Step Number="14" Init="false" Name="Step10">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;2M1&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie Ejection&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
@@ -1685,7 +1685,7 @@
       <Step Number="9" Init="false" Name="Step12">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;3M1&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie Rampe&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
@@ -1802,7 +1802,7 @@
       <Step Number="10" Init="false" Name="Step16">
         <Actions>
           <Action Qualifier="N">
-            <Token Text="&quot;1M2&quot;" />
+            <Token Text="&quot;Mémoires&quot;.&quot;Sortie Desc Asc&quot;" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
@@ -1880,121 +1880,27 @@
           <Parts>
             <Access Scope="GlobalVariable" UId="21">
               <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
                 <Component Name="Reset" />
-              </Symbol>
-            </Access>
-            <Access Scope="GlobalVariable" UId="22">
-              <Symbol>
-                <Component Name="B4" />
-              </Symbol>
-            </Access>
-            <Part Name="Contact" UId="23" />
-            <Part Name="Contact" UId="24">
-              <Negated Name="operand" />
-            </Part>
-            <Part Name="TrCoil" UId="25" />
-          </Parts>
-          <Wires>
-            <Wire UId="26">
-              <Powerrail />
-              <NameCon UId="23" Name="in" />
-            </Wire>
-            <Wire UId="27">
-              <IdentCon UId="21" />
-              <NameCon UId="23" Name="operand" />
-            </Wire>
-            <Wire UId="28">
-              <NameCon UId="23" Name="out" />
-              <NameCon UId="24" Name="in" />
-            </Wire>
-            <Wire UId="29">
-              <IdentCon UId="22" />
-              <NameCon UId="24" Name="operand" />
-            </Wire>
-            <Wire UId="30">
-              <NameCon UId="24" Name="out" />
-              <NameCon UId="25" Name="in" />
-            </Wire>
-          </Wires>
-        </FlgNet>
-      </Transition>
-      <Transition IsMissing="false" Name="Trans2" Number="2" ProgrammingLanguage="LAD">
-        <FlgNet>
-          <Parts>
-            <Access Scope="GlobalVariable" UId="21">
-              <Symbol>
-                <Component Name="1B2" />
-              </Symbol>
-            </Access>
-            <Part Name="Contact" UId="22" />
-            <Part Name="TrCoil" UId="23" />
-          </Parts>
-          <Wires>
-            <Wire UId="24">
-              <Powerrail />
-              <NameCon UId="22" Name="in" />
-            </Wire>
-            <Wire UId="25">
-              <IdentCon UId="21" />
-              <NameCon UId="22" Name="operand" />
-            </Wire>
-            <Wire UId="26">
-              <NameCon UId="22" Name="out" />
-              <NameCon UId="23" Name="in" />
-            </Wire>
-          </Wires>
-        </FlgNet>
-      </Transition>
-      <Transition IsMissing="false" Name="Trans3" Number="3" ProgrammingLanguage="LAD">
-        <FlgNet>
-          <Parts>
-            <Access Scope="GlobalVariable" UId="21">
-              <Symbol>
-                <Component Name="Start" />
-              </Symbol>
-            </Access>
-            <Part Name="Contact" UId="22" />
-            <Part Name="TrCoil" UId="23" />
-          </Parts>
-          <Wires>
-            <Wire UId="24">
-              <Powerrail />
-              <NameCon UId="22" Name="in" />
-            </Wire>
-            <Wire UId="25">
-              <IdentCon UId="21" />
-              <NameCon UId="22" Name="operand" />
-            </Wire>
-            <Wire UId="26">
-              <NameCon UId="22" Name="out" />
-              <NameCon UId="23" Name="in" />
-            </Wire>
-          </Wires>
-        </FlgNet>
-      </Transition>
-      <Transition IsMissing="false" Name="Trans4" Number="4" ProgrammingLanguage="LAD">
-        <FlgNet>
-          <Parts>
-            <Access Scope="GlobalVariable" UId="21">
-              <Symbol>
-                <Component Name="PART_AV" />
-              </Symbol>
-            </Access>
-            <Access Scope="GlobalVariable" UId="22">
-              <Symbol>
-                <Component Name="B4" />
               </Symbol>
             </Access>
             <Access Scope="GlobalVariable" UId="23">
               <Symbol>
-                <Component Name="Start" />
+                <Component Name="B4" />
               </Symbol>
             </Access>
-            <Part Name="Contact" UId="24" />
-            <Part Name="Contact" UId="25">
+            <Part Name="Contact" UId="24">
               <Negated Name="operand" />
             </Part>
-            <Part Name="Contact" UId="26" />
+            <Part Name="Contact" UId="25" />
+            <Part Name="Contact" UId="26">
+              <Negated Name="operand" />
+            </Part>
             <Part Name="TrCoil" UId="27" />
           </Parts>
           <Wires>
@@ -2029,23 +1935,24 @@
           </Wires>
         </FlgNet>
       </Transition>
-      <Transition IsMissing="false" Name="Trans5" Number="5" ProgrammingLanguage="LAD">
+      <Transition IsMissing="false" Name="Trans2" Number="2" ProgrammingLanguage="LAD">
         <FlgNet>
           <Parts>
             <Access Scope="GlobalVariable" UId="21">
               <Symbol>
-                <Component Name="B2" />
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
               </Symbol>
             </Access>
             <Access Scope="GlobalVariable" UId="22">
               <Symbol>
-                <Component Name="B4" />
+                <Component Name="1B2" />
               </Symbol>
             </Access>
-            <Part Name="Contact" UId="23" />
-            <Part Name="Contact" UId="24">
+            <Part Name="Contact" UId="23">
               <Negated Name="operand" />
             </Part>
+            <Part Name="Contact" UId="24" />
             <Part Name="TrCoil" UId="25" />
           </Parts>
           <Wires>
@@ -2068,6 +1975,184 @@
             <Wire UId="30">
               <NameCon UId="24" Name="out" />
               <NameCon UId="25" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans3" Number="3" ProgrammingLanguage="LAD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="GlobalVariable" UId="21">
+              <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
+                <Component Name="Start" />
+              </Symbol>
+            </Access>
+            <Part Name="Contact" UId="23">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="24" />
+            <Part Name="TrCoil" UId="25" />
+          </Parts>
+          <Wires>
+            <Wire UId="26">
+              <Powerrail />
+              <NameCon UId="23" Name="in" />
+            </Wire>
+            <Wire UId="27">
+              <IdentCon UId="21" />
+              <NameCon UId="23" Name="operand" />
+            </Wire>
+            <Wire UId="28">
+              <NameCon UId="23" Name="out" />
+              <NameCon UId="24" Name="in" />
+            </Wire>
+            <Wire UId="29">
+              <IdentCon UId="22" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="30">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans4" Number="4" ProgrammingLanguage="LAD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="GlobalVariable" UId="21">
+              <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
+                <Component Name="PART_AV" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="23">
+              <Symbol>
+                <Component Name="B4" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="24">
+              <Symbol>
+                <Component Name="Start" />
+              </Symbol>
+            </Access>
+            <Part Name="Contact" UId="25">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="26" />
+            <Part Name="Contact" UId="27">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="28" />
+            <Part Name="TrCoil" UId="29" />
+          </Parts>
+          <Wires>
+            <Wire UId="30">
+              <Powerrail />
+              <NameCon UId="25" Name="in" />
+            </Wire>
+            <Wire UId="31">
+              <IdentCon UId="21" />
+              <NameCon UId="25" Name="operand" />
+            </Wire>
+            <Wire UId="32">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
+            </Wire>
+            <Wire UId="33">
+              <IdentCon UId="22" />
+              <NameCon UId="26" Name="operand" />
+            </Wire>
+            <Wire UId="34">
+              <NameCon UId="26" Name="out" />
+              <NameCon UId="27" Name="in" />
+            </Wire>
+            <Wire UId="35">
+              <IdentCon UId="23" />
+              <NameCon UId="27" Name="operand" />
+            </Wire>
+            <Wire UId="36">
+              <NameCon UId="27" Name="out" />
+              <NameCon UId="28" Name="in" />
+            </Wire>
+            <Wire UId="37">
+              <IdentCon UId="24" />
+              <NameCon UId="28" Name="operand" />
+            </Wire>
+            <Wire UId="38">
+              <NameCon UId="28" Name="out" />
+              <NameCon UId="29" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans5" Number="5" ProgrammingLanguage="LAD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="GlobalVariable" UId="21">
+              <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
+                <Component Name="B2" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="23">
+              <Symbol>
+                <Component Name="B4" />
+              </Symbol>
+            </Access>
+            <Part Name="Contact" UId="24">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="25" />
+            <Part Name="Contact" UId="26">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="TrCoil" UId="27" />
+          </Parts>
+          <Wires>
+            <Wire UId="28">
+              <Powerrail />
+              <NameCon UId="24" Name="in" />
+            </Wire>
+            <Wire UId="29">
+              <IdentCon UId="21" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="30">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="in" />
+            </Wire>
+            <Wire UId="31">
+              <IdentCon UId="22" />
+              <NameCon UId="25" Name="operand" />
+            </Wire>
+            <Wire UId="32">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
+            </Wire>
+            <Wire UId="33">
+              <IdentCon UId="23" />
+              <NameCon UId="26" Name="operand" />
+            </Wire>
+            <Wire UId="34">
+              <NameCon UId="26" Name="out" />
+              <NameCon UId="27" Name="in" />
             </Wire>
           </Wires>
         </FlgNet>
@@ -2077,24 +2162,41 @@
           <Parts>
             <Access Scope="GlobalVariable" UId="21">
               <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
                 <Component Name="1B1" />
               </Symbol>
             </Access>
-            <Part Name="Contact" UId="22" />
-            <Part Name="TrCoil" UId="23" />
+            <Part Name="Contact" UId="23">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="24" />
+            <Part Name="TrCoil" UId="25" />
           </Parts>
           <Wires>
-            <Wire UId="24">
-              <Powerrail />
-              <NameCon UId="22" Name="in" />
-            </Wire>
-            <Wire UId="25">
-              <IdentCon UId="21" />
-              <NameCon UId="22" Name="operand" />
-            </Wire>
             <Wire UId="26">
-              <NameCon UId="22" Name="out" />
+              <Powerrail />
               <NameCon UId="23" Name="in" />
+            </Wire>
+            <Wire UId="27">
+              <IdentCon UId="21" />
+              <NameCon UId="23" Name="operand" />
+            </Wire>
+            <Wire UId="28">
+              <NameCon UId="23" Name="out" />
+              <NameCon UId="24" Name="in" />
+            </Wire>
+            <Wire UId="29">
+              <IdentCon UId="22" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="30">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="in" />
             </Wire>
           </Wires>
         </FlgNet>
@@ -2104,36 +2206,53 @@
           <Parts>
             <Access Scope="GlobalVariable" UId="21">
               <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
                 <Component Name="Hauteur (pourcentage)" />
               </Symbol>
             </Access>
-            <Access Scope="LiteralConstant" UId="22">
+            <Access Scope="LiteralConstant" UId="23">
               <Constant>
                 <ConstantType>Real</ConstantType>
                 <ConstantValue>47.0</ConstantValue>
               </Constant>
             </Access>
-            <Part Name="Ge" UId="23">
+            <Part Name="Contact" UId="24">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Ge" UId="25">
               <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
             </Part>
-            <Part Name="TrCoil" UId="24" />
+            <Part Name="TrCoil" UId="26" />
           </Parts>
           <Wires>
-            <Wire UId="25">
-              <Powerrail />
-              <NameCon UId="23" Name="pre" />
-            </Wire>
-            <Wire UId="26">
-              <IdentCon UId="21" />
-              <NameCon UId="23" Name="in1" />
-            </Wire>
             <Wire UId="27">
-              <IdentCon UId="22" />
-              <NameCon UId="23" Name="in2" />
+              <Powerrail />
+              <NameCon UId="24" Name="in" />
             </Wire>
             <Wire UId="28">
-              <NameCon UId="23" Name="out" />
-              <NameCon UId="24" Name="in" />
+              <IdentCon UId="21" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="29">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="pre" />
+            </Wire>
+            <Wire UId="30">
+              <IdentCon UId="22" />
+              <NameCon UId="25" Name="in1" />
+            </Wire>
+            <Wire UId="31">
+              <IdentCon UId="23" />
+              <NameCon UId="25" Name="in2" />
+            </Wire>
+            <Wire UId="32">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
             </Wire>
           </Wires>
         </FlgNet>
@@ -2141,38 +2260,55 @@
       <Transition IsMissing="false" Name="Trans8" Number="8" ProgrammingLanguage="LAD">
         <FlgNet>
           <Parts>
-            <Access Scope="LocalVariable" UId="21">
+            <Access Scope="GlobalVariable" UId="21">
+              <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="LocalVariable" UId="22">
               <Symbol>
                 <Component Name="Step8" />
                 <Component Name="T" />
               </Symbol>
             </Access>
-            <Access Scope="TypedConstant" UId="22">
+            <Access Scope="TypedConstant" UId="23">
               <Constant>
                 <ConstantValue>T#1S</ConstantValue>
               </Constant>
             </Access>
-            <Part Name="Gt" UId="23">
+            <Part Name="Contact" UId="24">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Gt" UId="25">
               <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
             </Part>
-            <Part Name="TrCoil" UId="24" />
+            <Part Name="TrCoil" UId="26" />
           </Parts>
           <Wires>
-            <Wire UId="25">
-              <Powerrail />
-              <NameCon UId="23" Name="pre" />
-            </Wire>
-            <Wire UId="26">
-              <IdentCon UId="21" />
-              <NameCon UId="23" Name="in1" />
-            </Wire>
             <Wire UId="27">
-              <IdentCon UId="22" />
-              <NameCon UId="23" Name="in2" />
+              <Powerrail />
+              <NameCon UId="24" Name="in" />
             </Wire>
             <Wire UId="28">
-              <NameCon UId="23" Name="out" />
-              <NameCon UId="24" Name="in" />
+              <IdentCon UId="21" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="29">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="pre" />
+            </Wire>
+            <Wire UId="30">
+              <IdentCon UId="22" />
+              <NameCon UId="25" Name="in1" />
+            </Wire>
+            <Wire UId="31">
+              <IdentCon UId="23" />
+              <NameCon UId="25" Name="in2" />
+            </Wire>
+            <Wire UId="32">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
             </Wire>
           </Wires>
         </FlgNet>
@@ -2182,42 +2318,59 @@
           <Parts>
             <Access Scope="GlobalVariable" UId="21">
               <Symbol>
-                <Component Name="B2" />
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
               </Symbol>
             </Access>
             <Access Scope="GlobalVariable" UId="22">
               <Symbol>
+                <Component Name="B2" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="23">
+              <Symbol>
                 <Component Name="B4" />
               </Symbol>
             </Access>
-            <Part Name="Contact" UId="23">
-              <Negated Name="operand" />
-            </Part>
             <Part Name="Contact" UId="24">
               <Negated Name="operand" />
             </Part>
-            <Part Name="TrCoil" UId="25" />
+            <Part Name="Contact" UId="25">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="26">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="TrCoil" UId="27" />
           </Parts>
           <Wires>
-            <Wire UId="26">
-              <Powerrail />
-              <NameCon UId="23" Name="in" />
-            </Wire>
-            <Wire UId="27">
-              <IdentCon UId="21" />
-              <NameCon UId="23" Name="operand" />
-            </Wire>
             <Wire UId="28">
-              <NameCon UId="23" Name="out" />
+              <Powerrail />
               <NameCon UId="24" Name="in" />
             </Wire>
             <Wire UId="29">
-              <IdentCon UId="22" />
+              <IdentCon UId="21" />
               <NameCon UId="24" Name="operand" />
             </Wire>
             <Wire UId="30">
               <NameCon UId="24" Name="out" />
               <NameCon UId="25" Name="in" />
+            </Wire>
+            <Wire UId="31">
+              <IdentCon UId="22" />
+              <NameCon UId="25" Name="operand" />
+            </Wire>
+            <Wire UId="32">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
+            </Wire>
+            <Wire UId="33">
+              <IdentCon UId="23" />
+              <NameCon UId="26" Name="operand" />
+            </Wire>
+            <Wire UId="34">
+              <NameCon UId="26" Name="out" />
+              <NameCon UId="27" Name="in" />
             </Wire>
           </Wires>
         </FlgNet>
@@ -2227,111 +2380,19 @@
           <Parts>
             <Access Scope="GlobalVariable" UId="21">
               <Symbol>
-                <Component Name="1B2" />
-              </Symbol>
-            </Access>
-            <Part Name="Contact" UId="22" />
-            <Part Name="TrCoil" UId="23" />
-          </Parts>
-          <Wires>
-            <Wire UId="24">
-              <Powerrail />
-              <NameCon UId="22" Name="in" />
-            </Wire>
-            <Wire UId="25">
-              <IdentCon UId="21" />
-              <NameCon UId="22" Name="operand" />
-            </Wire>
-            <Wire UId="26">
-              <NameCon UId="22" Name="out" />
-              <NameCon UId="23" Name="in" />
-            </Wire>
-          </Wires>
-        </FlgNet>
-      </Transition>
-      <Transition IsMissing="false" Name="Trans13" Number="16" ProgrammingLanguage="LAD">
-        <FlgNet>
-          <Parts>
-            <Access Scope="LocalVariable" UId="21">
-              <Symbol>
-                <Component Name="Step10" />
-                <Component Name="T" />
-              </Symbol>
-            </Access>
-            <Access Scope="TypedConstant" UId="22">
-              <Constant>
-                <ConstantValue>T#1S</ConstantValue>
-              </Constant>
-            </Access>
-            <Part Name="Gt" UId="23">
-              <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
-            </Part>
-            <Part Name="TrCoil" UId="24" />
-          </Parts>
-          <Wires>
-            <Wire UId="25">
-              <Powerrail />
-              <NameCon UId="23" Name="pre" />
-            </Wire>
-            <Wire UId="26">
-              <IdentCon UId="21" />
-              <NameCon UId="23" Name="in1" />
-            </Wire>
-            <Wire UId="27">
-              <IdentCon UId="22" />
-              <NameCon UId="23" Name="in2" />
-            </Wire>
-            <Wire UId="28">
-              <NameCon UId="23" Name="out" />
-              <NameCon UId="24" Name="in" />
-            </Wire>
-          </Wires>
-        </FlgNet>
-      </Transition>
-      <Transition IsMissing="false" Name="Trans14" Number="17" ProgrammingLanguage="LAD">
-        <FlgNet>
-          <Parts>
-            <Access Scope="GlobalVariable" UId="21">
-              <Symbol>
-                <Component Name="2B1" />
-              </Symbol>
-            </Access>
-            <Part Name="Contact" UId="22" />
-            <Part Name="TrCoil" UId="23" />
-          </Parts>
-          <Wires>
-            <Wire UId="24">
-              <Powerrail />
-              <NameCon UId="22" Name="in" />
-            </Wire>
-            <Wire UId="25">
-              <IdentCon UId="21" />
-              <NameCon UId="22" Name="operand" />
-            </Wire>
-            <Wire UId="26">
-              <NameCon UId="22" Name="out" />
-              <NameCon UId="23" Name="in" />
-            </Wire>
-          </Wires>
-        </FlgNet>
-      </Transition>
-      <Transition IsMissing="false" Name="Trans15" Number="9" ProgrammingLanguage="LAD">
-        <FlgNet>
-          <Parts>
-            <Access Scope="GlobalVariable" UId="21">
-              <Symbol>
-                <Component Name="2B1" />
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
               </Symbol>
             </Access>
             <Access Scope="GlobalVariable" UId="22">
               <Symbol>
-                <Component Name="B4" />
+                <Component Name="1B2" />
               </Symbol>
             </Access>
-            <Part Name="Contact" UId="23" />
-            <Part Name="Contact" UId="24">
+            <Part Name="Contact" UId="23">
               <Negated Name="operand" />
             </Part>
+            <Part Name="Contact" UId="24" />
             <Part Name="TrCoil" UId="25" />
           </Parts>
           <Wires>
@@ -2358,57 +2419,234 @@
           </Wires>
         </FlgNet>
       </Transition>
-      <Transition IsMissing="false" Name="Trans16" Number="11" ProgrammingLanguage="LAD">
+      <Transition IsMissing="false" Name="Trans13" Number="16" ProgrammingLanguage="LAD">
         <FlgNet>
           <Parts>
             <Access Scope="GlobalVariable" UId="21">
               <Symbol>
-                <Component Name="Hauteur (pourcentage)" />
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
               </Symbol>
             </Access>
-            <Access Scope="LiteralConstant" UId="22">
+            <Access Scope="LocalVariable" UId="22">
+              <Symbol>
+                <Component Name="Step10" />
+                <Component Name="T" />
+              </Symbol>
+            </Access>
+            <Access Scope="TypedConstant" UId="23">
               <Constant>
-                <ConstantType>Real</ConstantType>
-                <ConstantValue>47.0</ConstantValue>
+                <ConstantValue>T#1S</ConstantValue>
               </Constant>
             </Access>
-            <Access Scope="GlobalVariable" UId="23">
-              <Symbol>
-                <Component Name="B4" />
-              </Symbol>
-            </Access>
-            <Part Name="Lt" UId="24">
-              <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
-            </Part>
-            <Part Name="Contact" UId="25">
+            <Part Name="Contact" UId="24">
               <Negated Name="operand" />
+            </Part>
+            <Part Name="Gt" UId="25">
+              <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
             </Part>
             <Part Name="TrCoil" UId="26" />
           </Parts>
           <Wires>
             <Wire UId="27">
               <Powerrail />
-              <NameCon UId="24" Name="pre" />
+              <NameCon UId="24" Name="in" />
             </Wire>
             <Wire UId="28">
               <IdentCon UId="21" />
-              <NameCon UId="24" Name="in1" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="29">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="pre" />
+            </Wire>
+            <Wire UId="30">
+              <IdentCon UId="22" />
+              <NameCon UId="25" Name="in1" />
+            </Wire>
+            <Wire UId="31">
+              <IdentCon UId="23" />
+              <NameCon UId="25" Name="in2" />
+            </Wire>
+            <Wire UId="32">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans14" Number="17" ProgrammingLanguage="LAD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="GlobalVariable" UId="21">
+              <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
+                <Component Name="2B1" />
+              </Symbol>
+            </Access>
+            <Part Name="Contact" UId="23">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="24" />
+            <Part Name="TrCoil" UId="25" />
+          </Parts>
+          <Wires>
+            <Wire UId="26">
+              <Powerrail />
+              <NameCon UId="23" Name="in" />
+            </Wire>
+            <Wire UId="27">
+              <IdentCon UId="21" />
+              <NameCon UId="23" Name="operand" />
+            </Wire>
+            <Wire UId="28">
+              <NameCon UId="23" Name="out" />
+              <NameCon UId="24" Name="in" />
             </Wire>
             <Wire UId="29">
               <IdentCon UId="22" />
-              <NameCon UId="24" Name="in2" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="30">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans15" Number="9" ProgrammingLanguage="LAD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="GlobalVariable" UId="21">
+              <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
+                <Component Name="2B1" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="23">
+              <Symbol>
+                <Component Name="B4" />
+              </Symbol>
+            </Access>
+            <Part Name="Contact" UId="24">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="25" />
+            <Part Name="Contact" UId="26">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="TrCoil" UId="27" />
+          </Parts>
+          <Wires>
+            <Wire UId="28">
+              <Powerrail />
+              <NameCon UId="24" Name="in" />
+            </Wire>
+            <Wire UId="29">
+              <IdentCon UId="21" />
+              <NameCon UId="24" Name="operand" />
             </Wire>
             <Wire UId="30">
               <NameCon UId="24" Name="out" />
               <NameCon UId="25" Name="in" />
             </Wire>
             <Wire UId="31">
-              <IdentCon UId="23" />
+              <IdentCon UId="22" />
               <NameCon UId="25" Name="operand" />
             </Wire>
             <Wire UId="32">
               <NameCon UId="25" Name="out" />
               <NameCon UId="26" Name="in" />
+            </Wire>
+            <Wire UId="33">
+              <IdentCon UId="23" />
+              <NameCon UId="26" Name="operand" />
+            </Wire>
+            <Wire UId="34">
+              <NameCon UId="26" Name="out" />
+              <NameCon UId="27" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans16" Number="11" ProgrammingLanguage="LAD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="GlobalVariable" UId="21">
+              <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
+                <Component Name="Hauteur (pourcentage)" />
+              </Symbol>
+            </Access>
+            <Access Scope="LiteralConstant" UId="23">
+              <Constant>
+                <ConstantType>Real</ConstantType>
+                <ConstantValue>47.0</ConstantValue>
+              </Constant>
+            </Access>
+            <Access Scope="GlobalVariable" UId="24">
+              <Symbol>
+                <Component Name="B4" />
+              </Symbol>
+            </Access>
+            <Part Name="Contact" UId="25">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Lt" UId="26">
+              <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+            </Part>
+            <Part Name="Contact" UId="27">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="TrCoil" UId="28" />
+          </Parts>
+          <Wires>
+            <Wire UId="29">
+              <Powerrail />
+              <NameCon UId="25" Name="in" />
+            </Wire>
+            <Wire UId="30">
+              <IdentCon UId="21" />
+              <NameCon UId="25" Name="operand" />
+            </Wire>
+            <Wire UId="31">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="pre" />
+            </Wire>
+            <Wire UId="32">
+              <IdentCon UId="22" />
+              <NameCon UId="26" Name="in1" />
+            </Wire>
+            <Wire UId="33">
+              <IdentCon UId="23" />
+              <NameCon UId="26" Name="in2" />
+            </Wire>
+            <Wire UId="34">
+              <NameCon UId="26" Name="out" />
+              <NameCon UId="27" Name="in" />
+            </Wire>
+            <Wire UId="35">
+              <IdentCon UId="24" />
+              <NameCon UId="27" Name="operand" />
+            </Wire>
+            <Wire UId="36">
+              <NameCon UId="27" Name="out" />
+              <NameCon UId="28" Name="in" />
             </Wire>
           </Wires>
         </FlgNet>
@@ -2444,24 +2682,41 @@
           <Parts>
             <Access Scope="GlobalVariable" UId="21">
               <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="GlobalVariable" UId="22">
+              <Symbol>
                 <Component Name="1B2" />
               </Symbol>
             </Access>
-            <Part Name="Contact" UId="22" />
-            <Part Name="TrCoil" UId="23" />
+            <Part Name="Contact" UId="23">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Contact" UId="24" />
+            <Part Name="TrCoil" UId="25" />
           </Parts>
           <Wires>
-            <Wire UId="24">
-              <Powerrail />
-              <NameCon UId="22" Name="in" />
-            </Wire>
-            <Wire UId="25">
-              <IdentCon UId="21" />
-              <NameCon UId="22" Name="operand" />
-            </Wire>
             <Wire UId="26">
-              <NameCon UId="22" Name="out" />
+              <Powerrail />
               <NameCon UId="23" Name="in" />
+            </Wire>
+            <Wire UId="27">
+              <IdentCon UId="21" />
+              <NameCon UId="23" Name="operand" />
+            </Wire>
+            <Wire UId="28">
+              <NameCon UId="23" Name="out" />
+              <NameCon UId="24" Name="in" />
+            </Wire>
+            <Wire UId="29">
+              <IdentCon UId="22" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="30">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="in" />
             </Wire>
           </Wires>
         </FlgNet>
@@ -2469,38 +2724,55 @@
       <Transition IsMissing="false" Name="Trans21" Number="18" ProgrammingLanguage="LAD">
         <FlgNet>
           <Parts>
-            <Access Scope="LocalVariable" UId="21">
+            <Access Scope="GlobalVariable" UId="21">
+              <Symbol>
+                <Component Name="Mémoires" />
+                <Component Name="Mode Manuel" />
+              </Symbol>
+            </Access>
+            <Access Scope="LocalVariable" UId="22">
               <Symbol>
                 <Component Name="Step17" />
                 <Component Name="T" />
               </Symbol>
             </Access>
-            <Access Scope="TypedConstant" UId="22">
+            <Access Scope="TypedConstant" UId="23">
               <Constant>
                 <ConstantValue>T#1S</ConstantValue>
               </Constant>
             </Access>
-            <Part Name="Gt" UId="23">
+            <Part Name="Contact" UId="24">
+              <Negated Name="operand" />
+            </Part>
+            <Part Name="Gt" UId="25">
               <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
             </Part>
-            <Part Name="TrCoil" UId="24" />
+            <Part Name="TrCoil" UId="26" />
           </Parts>
           <Wires>
-            <Wire UId="25">
-              <Powerrail />
-              <NameCon UId="23" Name="pre" />
-            </Wire>
-            <Wire UId="26">
-              <IdentCon UId="21" />
-              <NameCon UId="23" Name="in1" />
-            </Wire>
             <Wire UId="27">
-              <IdentCon UId="22" />
-              <NameCon UId="23" Name="in2" />
+              <Powerrail />
+              <NameCon UId="24" Name="in" />
             </Wire>
             <Wire UId="28">
-              <NameCon UId="23" Name="out" />
-              <NameCon UId="24" Name="in" />
+              <IdentCon UId="21" />
+              <NameCon UId="24" Name="operand" />
+            </Wire>
+            <Wire UId="29">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="pre" />
+            </Wire>
+            <Wire UId="30">
+              <IdentCon UId="22" />
+              <NameCon UId="25" Name="in1" />
+            </Wire>
+            <Wire UId="31">
+              <IdentCon UId="23" />
+              <NameCon UId="25" Name="in2" />
+            </Wire>
+            <Wire UId="32">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
             </Wire>
           </Wires>
         </FlgNet>
