@@ -8,9 +8,9 @@
     <ObjectList>
       <SW.Tags.PlcTag ID="1" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.5</LogicalAddress>
-          <Name>Clock 1Hz</Name>
+          <DataTypeName>Int</DataTypeName>
+          <LogicalAddress>%MW80</LogicalAddress>
+          <Name>RETVAL_WWW</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="2" CompositionName="Comment">
@@ -28,8 +28,8 @@
       <SW.Tags.PlcTag ID="4" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.3</LogicalAddress>
-          <Name>Clock 2Hz</Name>
+          <LogicalAddress>%Q1.0</LogicalAddress>
+          <Name>LampeStart</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="5" CompositionName="Comment">
@@ -47,8 +47,8 @@
       <SW.Tags.PlcTag ID="7" CompositionName="Tags">
         <AttributeList>
           <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.6</LogicalAddress>
-          <Name>Clock 0,625Hz</Name>
+          <LogicalAddress>%M10.0</LogicalAddress>
+          <Name>Start_Stop</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="8" CompositionName="Comment">
@@ -65,9 +65,9 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="A" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.7</LogicalAddress>
-          <Name>Clock 0,5Hz</Name>
+          <DataTypeName>Int</DataTypeName>
+          <LogicalAddress>%MW2</LogicalAddress>
+          <Name>Compteur</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="B" CompositionName="Comment">
@@ -84,9 +84,9 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="D" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.4</LogicalAddress>
-          <Name>Clock 1,5Hz</Name>
+          <DataTypeName>Int</DataTypeName>
+          <LogicalAddress>%MW100</LogicalAddress>
+          <Name>PieceMax</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="E" CompositionName="Comment">
@@ -103,9 +103,9 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="10" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.2</LogicalAddress>
-          <Name>Clock 2,5Hz</Name>
+          <DataTypeName>Int</DataTypeName>
+          <LogicalAddress>%MW10</LogicalAddress>
+          <Name>Compteur Bonnes Pièces</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="11" CompositionName="Comment">
@@ -122,9 +122,9 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="13" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.1</LogicalAddress>
-          <Name>Clock 5Hz</Name>
+          <DataTypeName>Int</DataTypeName>
+          <LogicalAddress>%MW12</LogicalAddress>
+          <Name>Compteur Mauvaises Pièces</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="14" CompositionName="Comment">
@@ -141,14 +141,52 @@
       </SW.Tags.PlcTag>
       <SW.Tags.PlcTag ID="16" CompositionName="Tags">
         <AttributeList>
-          <DataTypeName>Bool</DataTypeName>
-          <LogicalAddress>%M100.0</LogicalAddress>
-          <Name>Clock 10Hz</Name>
+          <DataTypeName>DWord</DataTypeName>
+          <LogicalAddress>%MD50</LogicalAddress>
+          <Name>Pointeur 1</Name>
         </AttributeList>
         <ObjectList>
           <MultilingualText ID="17" CompositionName="Comment">
             <ObjectList>
               <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="19" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>DWord</DataTypeName>
+          <LogicalAddress>%MD54</LogicalAddress>
+          <Name>Pointeur 2</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Tags.PlcTag>
+      <SW.Tags.PlcTag ID="1C" CompositionName="Tags">
+        <AttributeList>
+          <DataTypeName>Word</DataTypeName>
+          <LogicalAddress>%MW200</LogicalAddress>
+          <Name>A CHANGER</Name>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
