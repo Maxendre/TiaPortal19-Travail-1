@@ -14,6 +14,7 @@
     <Member Name="FM Noires" Datatype="Bool" Remanence="Retain" />
     <Member Name="FM Mauvaises" Datatype="Bool" Remanence="Retain" />
     <Member Name="FM Bonnes" Datatype="Bool" Remanence="Retain" />
+    <Member Name="FM QuiSertARien" Datatype="Bool" Remanence="Retain" />
   </Section>
 </Sections></Interface>
       <Name>Gestion_DB</Name>

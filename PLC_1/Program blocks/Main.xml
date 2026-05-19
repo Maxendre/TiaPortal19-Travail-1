@@ -389,23 +389,7 @@
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
         <AttributeList>
-          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
-  <Parts>
-    <Call UId="21">
-      <CallInfo Name="Test FM" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="22">
-          <Component Name="Test FM_DB" />
-        </Instance>
-      </CallInfo>
-    </Call>
-  </Parts>
-  <Wires>
-    <Wire UId="23">
-      <Powerrail />
-      <NameCon UId="21" Name="en" />
-    </Wire>
-  </Wires>
-</FlgNet></NetworkSource>
+          <NetworkSource />
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>

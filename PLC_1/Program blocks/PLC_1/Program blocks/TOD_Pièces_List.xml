@@ -261,7 +261,7 @@
     <StlToken Text="L" />
     <Access Scope="GlobalVariable">
       <Symbol>
-        <Component Name="A CHANGER" />
+        <Component Name="NB Bonnes Pièces" />
       </Symbol>
     </Access>
   </StlStatement>
@@ -288,17 +288,26 @@
     <Access Scope="LiteralConstant">
       <Constant>
         <ConstantType>Int</ConstantType>
-        <ConstantValue>0</ConstantValue>
+        <ConstantValue>40</ConstantValue>
       </Constant>
     </Access>
   </StlStatement>
-  <StlStatement UId="21">
+  <StlStatement UId="93">
     <StlToken Text="T" />
     <Access Scope="GlobalVariable">
       <Symbol>
-        <Component Name="A CHANGER" />
+        <Component Name="BoolDeResetBonnePiece" />
       </Symbol>
     </Access>
+  </StlStatement>
+  <StlStatement UId="95">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="92">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="21">
+    <StlToken Text="EMPTY_LINE" />
   </StlStatement>
   <StlStatement UId="22">
     <StlToken Text="EMPTY_LINE" />
@@ -561,7 +570,7 @@
     <StlToken Text="L" />
     <Access Scope="GlobalVariable">
       <Symbol>
-        <Component Name="A CHANGER" />
+        <Component Name="NB Mauvaises Pièces" />
       </Symbol>
     </Access>
   </StlStatement>
@@ -583,12 +592,12 @@
     </LineComment>
     <StlToken Text="COMMENT" />
   </StlStatement>
-  <StlStatement UId="62">
+  <StlStatement UId="92">
     <StlToken Text="L" />
     <Access Scope="LiteralConstant">
       <Constant>
         <ConstantType>Int</ConstantType>
-        <ConstantValue>0</ConstantValue>
+        <ConstantValue>50</ConstantValue>
       </Constant>
     </Access>
   </StlStatement>
@@ -596,9 +605,15 @@
     <StlToken Text="T" />
     <Access Scope="GlobalVariable">
       <Symbol>
-        <Component Name="A CHANGER" />
+        <Component Name="BoolDeResetMauvaisePiece" />
       </Symbol>
     </Access>
+  </StlStatement>
+  <StlStatement UId="91">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="93">
+    <StlToken Text="EMPTY_LINE" />
   </StlStatement>
   <StlStatement UId="22">
     <StlToken Text="EMPTY_LINE" />
