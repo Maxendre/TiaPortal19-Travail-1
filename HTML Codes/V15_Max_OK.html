@@ -1,0 +1,100 @@
+<!-- AWP_In_Variable Name="SERVER:current_user_id" Use="User_ID"-->
+<!-- AWP_In_Variable Name='"BPStartWeb"' -->
+<!-- AWP_In_Variable Name='"BPStopWeb"' -->
+<!-- AWP_In_Variable Name='"BPResetWeb"' -->
+
+<!-- AWP_Enum_Def Name="OverrideStatus" Values='0:"0",1:"1"' -->
+<!-- AWP_Enum_Ref Name='M251.0' Enum="OverrideStatus" --> 
+<!-- AWP_Enum_Ref Name='M251.1' Enum="OverrideStatus" --> 
+<!-- AWP_Enum_Ref Name='M251.2' Enum="OverrideStatus" --> 
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Machine</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(270deg, #4facfe, #00f2fe, #43e97b, #38f9d7); background-size: 800% 800%; animation: gradientMove 15s ease infinite; }
+        @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .container { background: rgba(255,255,255,0.95); padding: 30px; border-radius: 20px; width: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        h2 { text-align: center; margin-bottom: 20px; }
+        .buttons { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        button { flex: 1; margin: 5px; padding: 12px; border: none; border-radius: 10px; color: white; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        button:hover { transform: scale(1.05); }
+        .start { background: #28a745; }
+        .stop { background: #dc3545; }
+        .reset { background: #ffc107; color: black; }
+        .lamps { display: flex; justify-content: space-around; margin-bottom: 30px; }
+        .lamp { text-align: center; font-size: 14px; font-weight: bold; }
+        .circle { width: 35px; height: 35px; border-radius: 50%; background: gray; margin: auto; border: 2px solid #333; margin-bottom: 5px; }
+        .status-1 { background: limegreen; box-shadow: 0 0 15px limegreen; }
+        .status-0 { background: darkred; box-shadow: 0 0 5px black; }
+        .counters { display: flex; justify-content: center; gap: 20px; }
+        .counter { background: #f2f2f2; padding: 15px; border-radius: 10px; width: 150px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Dashboard Machine</h2>
+
+    <div class="buttons">
+    <button class="start" onmousedown="sendCmd('BPStartWeb', 1)" onmouseup="sendCmd('BPStartWeb', 0)" style="flex:1;margin:5px;">Start</button>
+    <button class="stop" onmousedown="sendCmd('BPStopWeb', 1)" onmouseup="sendCmd('BPStopWeb', 0)" style="flex:1;margin:5px;">Stop</button>
+    <button class="reset" onmousedown="sendCmd('BPResetWeb', 1)" onmouseup="sendCmd('BPResetWeb', 0)" style="flex:1;margin:5px;color:black;">Reset</button>
+</div>
+
+<form id="cmdForm" method="POST" target="cmdFrame" action="">
+    <input type="hidden" id="cmdVar" name="" value="">
+</form>
+<iframe name="cmdFrame" style="display:none;"></iframe>
+
+    <div class="lamps">
+        <div class="lamp">
+            <div class="circle status-:=LStart:"></div>
+            <p>LStart</p>
+        </div>
+        <div class="lamp">
+            <div class="circle status-:=LReset:"></div>
+            <p>LReset</p>
+        </div>
+        <div class="lamp">
+            <div class="circle status-:=Q1:"></div>
+            <p>Q1</p>
+        </div>
+        <div class="lamp">
+            <div class="circle status-:=Q2:"></div>
+            <p>Q2</p>
+        </div>
+    </div>
+
+    <div class="counters">
+        <div class="counter">
+            <h3>:=MW28:</h3>
+            <p>Mauvaises</p>
+        </div>
+        <div class="counter">
+            <h3>:=MW26:</h3>
+            <p>Bonnes</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ✅ Fix #4 : reload() sans argument booléen déprécié
+    setTimeout(function(){
+        location.reload();
+    }, 3000);
+</script>
+
+<script>
+function sendCmd(varName, value) {
+    // On formate le nom avec les guillemets Siemens '"Nom"'
+    document.getElementById("cmdVar").name = '"' + varName + '"';
+    document.getElementById("cmdVar").value = value;
+    document.getElementById("cmdForm").submit();
+}
+</script>
+</body>
+</html>

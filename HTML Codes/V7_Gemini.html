@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Machine</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(270deg, #4facfe, #00f2fe, #43e97b, #38f9d7); background-size: 800% 800%; animation: gradientMove 15s ease infinite; }
+        @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .container { background: rgba(255,255,255,0.95); padding: 30px; border-radius: 20px; width: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        h2 { text-align: center; margin-bottom: 20px; }
+        .buttons { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        button { flex: 1; margin: 5px; padding: 12px; border: none; border-radius: 10px; color: white; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        button:hover { transform: scale(1.05); }
+        .start { background: #28a745; }
+        .stop { background: #dc3545; }
+        .reset { background: #ffc107; color: black; }
+        .lamps { display: flex; justify-content: space-around; margin-bottom: 30px; }
+        .lamp { text-align: center; font-size: 14px; font-weight: bold; }
+        .circle { width: 35px; height: 35px; border-radius: 50%; background: gray; margin: auto; border: 2px solid #333; margin-bottom: 5px; }
+        
+        /* Classes pilotées par l'état des sorties PLC */
+        .status-1 { background: limegreen; box-shadow: 0 0 15px limegreen; }
+        .status-0 { background: darkred; box-shadow: 0 0 5px black; }
+        
+        .counters { display: flex; justify-content: center; gap: 20px; }
+        .counter { background: #f2f2f2; padding: 15px; border-radius: 10px; width: 150px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Dashboard Machine</h2>
+
+    <form method="POST" action="">
+        <div class="buttons">
+            <button class="start" type="submit" name='"BPStartWeb"' value="1">Start</button>
+            <button class="stop" type="submit" name='"BPStopWeb"' value="1">Stop</button>
+            <button class="reset" type="submit" name='"BPResetWeb"' value="1">Reset</button>
+        </div>
+
+        <div class="lamps">
+            <div class="lamp">
+                <div class="circle status-:=LStart:"></div>
+                <p>LStart</p>
+            </div>
+            <div class="lamp">
+                <div class="circle status-:=LReset:"></div>
+                <p>LReset</p>
+            </div>
+            <div class="lamp">
+                <div class="circle status-:=Q1:"></div>
+                <p>Q1</p>
+            </div>
+            <div class="lamp">
+                <div class="circle status-:=Q2:"></div>
+                <p>Q2</p>
+            </div>
+        </div>
+
+        <div class="counters">
+            <div class="counter">
+                <h3>:=MW28:</h3>
+                <p>Mauvaises</p>
+            </div>
+            <div class="counter">
+                <h3>:=MW26:</h3>
+                <p>Bonnes</p>
+            </div>
+        </div>
+        
+        <input type="hidden" name='"BPStartWeb"' value="0">
+        <input type="hidden" name='"BPStopWeb"' value="0">
+        <input type="hidden" name='"BPResetWeb"' value="0">
+    </form>
+</div>
+
+<script>
+    // Rafraîchissement automatique
+    setTimeout(function(){
+        window.location.reload(1);
+    }, 3000);
+</script>
+
+</body>
+</html>
